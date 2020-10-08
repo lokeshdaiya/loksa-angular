@@ -1,0 +1,20 @@
+import { <%= className %>Action, <%= className %>ActionTypes } from './<%= fileName %>.actions';
+import { initialState, <%= className %>State } from './<%= fileName %>.state';
+export const <%= className.toUpperCase() %>_FEATURE_KEY = '<%= propertyName %>';
+
+export function reducer(
+  state: <%= className %>State = initialState, 
+  action: <%= className %>Action): <%= className %>State
+{
+  switch (action.type) {
+    case <%= className %>ActionTypes.<%= className %>Loaded: {
+      state = {
+        ...state,
+        list  : action.payload,
+        loaded: true
+      };
+      break;
+    }
+  }
+  return state;
+}

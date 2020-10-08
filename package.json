@@ -1,20 +1,24 @@
 {
-  "name": "@loksa/ngrx",
-  "version": "0.0.0",
-  "description": "A schematics",
+  "name": "@loksa/angular",
+  "version": "0.0.1",
+  "description": "A schematics to generate Feature state with",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics"
+    "schematics, ngrx, angular, nrwl"
   ],
-  "author": "",
+  "author": "Lokesh Daiya <ldlucky2009@gmail.com>",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
     "@angular-devkit/core": "^10.1.4",
     "@angular-devkit/schematics": "^10.1.4",
+    "@ngrx/schematics": "^10.0.1",
+    "@nrwl/angular": "^10.3.0",
+    "@nrwl/workspace": "^10.3.0",
+    "@schematics/angular": "^10.1.4",
     "typescript": "~4.0.2"
   },
   "devDependencies": {

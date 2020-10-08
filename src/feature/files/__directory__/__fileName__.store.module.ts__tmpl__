@@ -1,0 +1,17 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { <%= className %>Effects } from './<%= fileName %>.effects';
+import { <%= className.toUpperCase() %>_FEATURE_KEY, reducer } from './<%= fileName %>.reducer';
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    StoreModule.forFeature(<%= className.toUpperCase() %>_FEATURE_KEY, reducer),
+    EffectsModule.forFeature([<%= className %>Effects]),
+  ],
+  exports: [StoreModule, EffectsModule],
+})
+export class DashboardStoreModule {}
