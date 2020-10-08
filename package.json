@@ -25,5 +25,9 @@
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "jasmine": "^3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lokeshdaiya/loksa-angular"
   }
 }

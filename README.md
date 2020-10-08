@@ -1,28 +1,16 @@
-# Getting Started With Schematics
+# Description
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+`@loksa/angular` is a schematic to generate ngrx feature module in your angular ngrx project.
 
-### Testing
+# Installation
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+Run below command in your project.
 
-Check the documentation with
-```bash
-schematics --help
-```
+`ng add @loksa/angular`
 
-### Unit Testing
+# Usage
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
+generate ngrx feature module with below command.
 
-### Publishing
+`ng g @loksa/angular:ngrx-feature`
 
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
- 
