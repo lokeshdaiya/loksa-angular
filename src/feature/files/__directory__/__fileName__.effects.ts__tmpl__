@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Effect, Actions, ofType } from '@ngrx/effects';
 import { fetch } from '@nrwl/angular';
 
 import { <%= className %>PartialState  } from './<%= fileName %>.state';
@@ -9,17 +9,6 @@ import { Load<%= className %>, <%= className %>Loaded, <%= className %>LoadError
 export class <%= className %>Effects {
  @Effect() load<%= className %>$ = this.actions$.pipe(
      ofType(<%= className %>ActionTypes.Load<%= className %>),
-     fetch({
-        run: (action: Load<%= className %>, state: <%= className %>PartialState) => {
-          // Your custom REST 'load' logic goes here. For now just return an empty list...
-          return new <%= className %>Loaded([]);
-        },
-
-        onError: (action: Load<%= className %>, error) => {
-          console.error('Error', error);
-          return new <%= className %>LoadError(error);
-        }
-      })
   );
  
 

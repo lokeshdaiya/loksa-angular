@@ -12,6 +12,9 @@ export interface <%= className %>State {
   error      ?: any;                  // last none error (if any)
 };
 
+export interface <%= className %>PartialState {
+  readonly [<%= className.toUpperCase() %>_FEATURE_KEY]: <%= className %>State;
+}
 
 export const initialState: <%= className %>State = {
   list : [ ],
