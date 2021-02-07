@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Effect, Actions, ofType } from '@ngrx/effects';
-import { fetch } from '@nrwl/angular';
 
-import { <%= className %>PartialState  } from './<%= fileName %>.state';
 import { Load<%= className %>, <%= className %>Loaded, <%= className %>LoadError, <%= className %>ActionTypes } from './<%= fileName %>.actions';
 
 @Injectable()

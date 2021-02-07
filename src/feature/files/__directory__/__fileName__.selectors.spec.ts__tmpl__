@@ -1,4 +1,4 @@
-import { <%= className %>State } from './<%= fileName %>.state';
+import {  <%= className %>State  } from './<%= fileName %>.reducer';
 import { <%= propertyName %>Query } from './<%= fileName %>.selectors';
 
 describe('<%= className %> Selectors', () => {
@@ -8,7 +8,17 @@ describe('<%= className %> Selectors', () => {
   let storeState;
 
   beforeEach(() => {
+     const create<%= className %> = ( id:string, name = '' ) => ({
+       id,
+       name: name || `name-${id}`
+     });
      storeState = {
+      <%= propertyName %> : {
+        list : [
+            create<%= className %>( 'PRODUCT-AAA' ),
+            create<%= className %>( 'PRODUCT-BBB' ),
+            create<%= className %>( 'PRODUCT-CCC' )
+          ],
           selectedId : 'PRODUCT-BBB',
           error      : ERROR_MSG,
           loaded     : true
@@ -19,7 +29,9 @@ describe('<%= className %> Selectors', () => {
   describe('<%= className %> Selectors', () => {
 
     it('getAll<%= className %>() should return the list of <%= className %>', () => {
+      const results = <%= propertyName %>Query.getAll<%= className %>(storeState);
       const selId = get<%= className %>Id(results[1]);
+
       expect(results.length).toBe(3);
       expect(selId).toBe('PRODUCT-BBB');
     });

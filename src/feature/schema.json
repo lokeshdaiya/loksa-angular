@@ -22,12 +22,6 @@
       "type": "string",
       "default": "+state",
       "description": "The name of the folder used to contain/group the generated NgRx files."
-    },
-    "facade": {
-      "type": "boolean",
-      "default": false,
-      "description": "Create a Facade class for the the Feature.",
-      "x-prompt": "Would you like to use a Facade with your NgRx state?"
     }
   }
 }

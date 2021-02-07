@@ -1,13 +1,16 @@
 {
   "name": "@loksa/angular",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A schematics to generate Feature state with",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics", "ngrx", "angular", "nrwl"
+    "schematics",
+    "ngrx",
+    "angular",
+    "nrwl"
   ],
   "author": "Lokesh Daiya <ldlucky2009@gmail.com>",
   "license": "MIT",
